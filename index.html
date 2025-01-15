@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather App</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-500 font-semibold text-white p-10">
+
+    <div id="content-body">
+
+        <header class="w-full flex justify-center gap-5 mt-8">
+            <input id="search" type="text" placeholder="enter your city" spellcheck="false" class="text-lg p-3 w-96 outline-none rounded-3xl text-gray-500">
+            <div class="bg-white rounded-full pl-3 pr-3 h-12">
+                <button id="btn" class="pt-3"><img src="images/search.png" alt="search" class="h-6"></button>
+            </div>
+        </header>
+
+        <div class="text-center hidden mt-3" id="error">
+            <p class="text-xl">Invalid City</p>
+        </div>
+
+        <div id="content" class="flex flex-col items-center gap-6 hidden">
+
+            <main class=" sm:mt-10 sm:p-5 border-none border bg-opacity-30 bg-black rounded-3xl flex flex-col items-center md:w-1/2 md:flex md:flex-row md:justify-center md:gap-20 md:mt-20">
+
+                <img src="images/rain.png" alt="weather condtn" class="h-1/6" id="icon">
+                <div class="md:flex md:flex-col md:justify-center">
+                    <h1 class="text-8xl" id="temp">56</h1>
+                    <h2 class="text-4xl mt-3 text-center" id="city">new</h2>
+                </div>
+    
+            </main>
+    
+            <section class="flex justify-center items-center gap-8 md:gap-20 mt-20">
+    
+                <div class="border-none border bg-opacity-30 bg-black rounded-3xl p-4 flex items-center gap-5">
+                    <div>
+                        <img src="images/humidity.png" alt="humidity" class="h-10 md:h-20">
+                    </div>
+                    <div class="flex flex-col justify-center gap-2">
+                        <p class="text-2xl md:text-4xl" id="humidity">23%</p>
+                        <p class="text-xl md:text-2xl">Humidity</p>
+                    </div>
+                </div>
+    
+                <div class="border-none border bg-opacity-30 bg-black rounded-3xl p-4 flex items-center gap-5">
+                    <div>
+                        <img src="images/wind.png" alt="wind" class="h-10 md:h-20">
+                    </div>
+                    <div class="flex flex-col justify-center gap-2">
+                        <p class="text-2xl md:text-4xl" id="wind">4km/hr</p>
+                        <p class="text-xl md:text-2xl">Wind Speed</p>
+                    </div>
+                </div>
+    
+            </section>
+
+        </div>
+
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
